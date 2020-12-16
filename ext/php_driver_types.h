@@ -17,6 +17,14 @@
 #ifndef PHP_DRIVER_TYPES_H
 #define PHP_DRIVER_TYPES_H
 
+#ifndef TSRMLS_D
+#define TSRMLS_D void
+#define TSRMLS_DC
+#define TSRMLS_C
+#define TSRMLS_CC
+#define TSRMLS_FETCH()
+#endif
+
 #if PHP_MAJOR_VERSION >= 7
 #define PHP_DRIVER_BEGIN_OBJECT_TYPE(type_name) \
   typedef struct php_driver_##type_name##_ {

@@ -1,6 +1,14 @@
 #ifndef PHP_DRIVER_GLOBALS_H
 #define PHP_DRIVER_GLOBALS_H
 
+#ifndef TSRMLS_D
+#define TSRMLS_D void
+#define TSRMLS_DC
+#define TSRMLS_C
+#define TSRMLS_CC
+#define TSRMLS_FETCH()
+#endif
+
 ZEND_BEGIN_MODULE_GLOBALS(php_driver)
   CassUuidGen  *uuid_gen;
   pid_t         uuid_gen_pid;

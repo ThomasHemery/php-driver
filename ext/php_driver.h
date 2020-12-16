@@ -1,6 +1,14 @@
 #ifndef PHP_DRIVER_H
 #define PHP_DRIVER_H
 
+#ifndef TSRMLS_D
+#define TSRMLS_D void
+#define TSRMLS_DC
+#define TSRMLS_C
+#define TSRMLS_CC
+#define TSRMLS_FETCH()
+#endif
+
 #ifdef HAVE_CONFIG_H
 #  include "config.h"
 #endif
