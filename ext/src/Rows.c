@@ -475,6 +475,6 @@ void php_driver_define_Rows(TSRMLS_D)
 
   memcpy(&php_driver_rows_handlers, zend_get_std_object_handlers(), sizeof(zend_object_handlers));
   php_driver_rows_handlers.get_properties  = php_driver_rows_properties;
-  php_driver_rows_handlers.compare_objects = php_driver_rows_compare;
+  php_driver_rows_handlers.compare = php_driver_rows_compare;
   php_driver_rows_handlers.clone_obj = NULL;
 }

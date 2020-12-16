@@ -186,7 +186,7 @@ void php_driver_define_TypeSet(TSRMLS_D)
 #if PHP_VERSION_ID >= 50400
   php_driver_type_set_handlers.get_gc          = php_driver_type_set_gc;
 #endif
-  php_driver_type_set_handlers.compare_objects = php_driver_type_set_compare;
+  php_driver_type_set_handlers.compare = php_driver_type_set_compare;
   php_driver_type_set_ce->ce_flags     |= PHP5TO7_ZEND_ACC_FINAL;
   php_driver_type_set_ce->create_object = php_driver_type_set_new;
 }

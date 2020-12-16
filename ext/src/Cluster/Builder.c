@@ -1442,5 +1442,5 @@ void php_driver_define_ClusterBuilder(TSRMLS_D)
 #if PHP_VERSION_ID >= 50400
   php_driver_cluster_builder_handlers.get_gc          = php_driver_cluster_builder_gc;
 #endif
-  php_driver_cluster_builder_handlers.compare_objects = php_driver_cluster_builder_compare;
+  php_driver_cluster_builder_handlers.compare = php_driver_cluster_builder_compare;
 }

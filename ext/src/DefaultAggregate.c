@@ -298,6 +298,6 @@ void php_driver_define_DefaultAggregate(TSRMLS_D)
 #if PHP_VERSION_ID >= 50400
   php_driver_default_aggregate_handlers.get_gc          = php_driver_type_default_aggregate_gc;
 #endif
-  php_driver_default_aggregate_handlers.compare_objects = php_driver_default_aggregate_compare;
+  php_driver_default_aggregate_handlers.compare = php_driver_default_aggregate_compare;
   php_driver_default_aggregate_handlers.clone_obj = NULL;
 }

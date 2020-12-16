@@ -271,7 +271,7 @@ void php_driver_define_Timestamp(TSRMLS_D)
 #if PHP_VERSION_ID >= 50400
   php_driver_timestamp_handlers.std.get_gc          = php_driver_timestamp_gc;
 #endif
-  php_driver_timestamp_handlers.std.compare_objects = php_driver_timestamp_compare;
+  php_driver_timestamp_handlers.std.compare = php_driver_timestamp_compare;
   php_driver_timestamp_ce->ce_flags |= PHP5TO7_ZEND_ACC_FINAL;
   php_driver_timestamp_ce->create_object = php_driver_timestamp_new;
 

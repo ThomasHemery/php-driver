@@ -532,7 +532,7 @@ void php_driver_define_Tinyint(TSRMLS_D)
 #if PHP_VERSION_ID >= 50400
   php_driver_tinyint_handlers.std.get_gc          = php_driver_tinyint_gc;
 #endif
-  php_driver_tinyint_handlers.std.compare_objects = php_driver_tinyint_compare;
+  php_driver_tinyint_handlers.std.compare = php_driver_tinyint_compare;
   php_driver_tinyint_handlers.std.cast_object     = php_driver_tinyint_cast;
 
   php_driver_tinyint_handlers.hash_value = php_driver_tinyint_hash_value;

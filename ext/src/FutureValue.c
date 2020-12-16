@@ -97,6 +97,6 @@ void php_driver_define_FutureValue(TSRMLS_D)
 
   memcpy(&php_driver_future_value_handlers, zend_get_std_object_handlers(), sizeof(zend_object_handlers));
   php_driver_future_value_handlers.get_properties  = php_driver_future_value_properties;
-  php_driver_future_value_handlers.compare_objects = php_driver_future_value_compare;
+  php_driver_future_value_handlers.compare = php_driver_future_value_compare;
   php_driver_future_value_handlers.clone_obj = NULL;
 }

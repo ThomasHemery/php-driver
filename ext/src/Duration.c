@@ -322,7 +322,7 @@ void php_driver_define_Duration(TSRMLS_D)
 
   memcpy(&php_driver_duration_handlers, zend_get_std_object_handlers(), sizeof(zend_object_handlers));
   php_driver_duration_handlers.std.get_properties  = php_driver_duration_properties;
-  php_driver_duration_handlers.std.compare_objects = php_driver_duration_compare;
+  php_driver_duration_handlers.std.compare = php_driver_duration_compare;
 
   php_driver_duration_handlers.hash_value = php_driver_duration_hash_value;
   php_driver_duration_handlers.std.clone_obj = NULL;

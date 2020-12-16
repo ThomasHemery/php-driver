@@ -501,7 +501,7 @@ void php_driver_define_Bigint(TSRMLS_D)
 #if PHP_VERSION_ID >= 50400
   php_driver_bigint_handlers.std.get_gc          = php_driver_bigint_gc;
 #endif
-  php_driver_bigint_handlers.std.compare_objects = php_driver_bigint_compare;
+  php_driver_bigint_handlers.std.compare = php_driver_bigint_compare;
   php_driver_bigint_handlers.std.cast_object     = php_driver_bigint_cast;
 
   php_driver_bigint_handlers.hash_value = php_driver_bigint_hash_value;

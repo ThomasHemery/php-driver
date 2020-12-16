@@ -151,7 +151,7 @@ void php_driver_define_TypeCustom(TSRMLS_D)
 #if PHP_VERSION_ID >= 50400
   php_driver_type_custom_handlers.get_gc          = php_driver_type_custom_gc;
 #endif
-  php_driver_type_custom_handlers.compare_objects = php_driver_type_custom_compare;
+  php_driver_type_custom_handlers.compare = php_driver_type_custom_compare;
   php_driver_type_custom_ce->ce_flags     |= PHP5TO7_ZEND_ACC_FINAL;
   php_driver_type_custom_ce->create_object = php_driver_type_custom_new;
 }

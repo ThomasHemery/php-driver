@@ -333,7 +333,7 @@ void php_driver_define_TypeUserType(TSRMLS_D)
 #if PHP_VERSION_ID >= 50400
   php_driver_type_user_type_handlers.get_gc          = php_driver_type_user_type_gc;
 #endif
-  php_driver_type_user_type_handlers.compare_objects = php_driver_type_user_type_compare;
+  php_driver_type_user_type_handlers.compare = php_driver_type_user_type_compare;
   php_driver_type_user_type_ce->ce_flags     |= PHP5TO7_ZEND_ACC_FINAL;
   php_driver_type_user_type_ce->create_object = php_driver_type_user_type_new;
 }

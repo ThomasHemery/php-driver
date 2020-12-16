@@ -186,7 +186,7 @@ void php_driver_define_Inet(TSRMLS_D)
 #if PHP_VERSION_ID >= 50400
   php_driver_inet_handlers.std.get_gc          = php_driver_inet_gc;
 #endif
-  php_driver_inet_handlers.std.compare_objects = php_driver_inet_compare;
+  php_driver_inet_handlers.std.compare = php_driver_inet_compare;
   php_driver_inet_ce->ce_flags |= PHP5TO7_ZEND_ACC_FINAL;
   php_driver_inet_ce->create_object = php_driver_inet_new;
 

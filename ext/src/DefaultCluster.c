@@ -282,5 +282,5 @@ void php_driver_define_DefaultCluster(TSRMLS_D)
 
   memcpy(&php_driver_default_cluster_handlers, zend_get_std_object_handlers(), sizeof(zend_object_handlers));
   php_driver_default_cluster_handlers.get_properties  = php_driver_default_cluster_properties;
-  php_driver_default_cluster_handlers.compare_objects = php_driver_default_cluster_compare;
+  php_driver_default_cluster_handlers.compare = php_driver_default_cluster_compare;
 }

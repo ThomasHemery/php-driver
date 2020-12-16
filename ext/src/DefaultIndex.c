@@ -311,6 +311,6 @@ void php_driver_define_DefaultIndex(TSRMLS_D)
 #if PHP_VERSION_ID >= 50400
   php_driver_default_index_handlers.get_gc          = php_driver_type_default_index_gc;
 #endif
-  php_driver_default_index_handlers.compare_objects = php_driver_default_index_compare;
+  php_driver_default_index_handlers.compare = php_driver_default_index_compare;
   php_driver_default_index_handlers.clone_obj = NULL;
 }

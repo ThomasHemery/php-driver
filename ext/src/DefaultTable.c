@@ -766,6 +766,6 @@ void php_driver_define_DefaultTable(TSRMLS_D)
 #if PHP_VERSION_ID >= 50400
   php_driver_default_table_handlers.get_gc          = php_driver_type_default_table_gc;
 #endif
-  php_driver_default_table_handlers.compare_objects = php_driver_default_table_compare;
+  php_driver_default_table_handlers.compare = php_driver_default_table_compare;
   php_driver_default_table_handlers.clone_obj = NULL;
 }

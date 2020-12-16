@@ -287,6 +287,6 @@ void php_driver_define_DefaultFunction(TSRMLS_D)
 #if PHP_VERSION_ID >= 50400
   php_driver_default_function_handlers.get_gc          = php_driver_type_default_function_gc;
 #endif
-  php_driver_default_function_handlers.compare_objects = php_driver_default_function_compare;
+  php_driver_default_function_handlers.compare = php_driver_default_function_compare;
   php_driver_default_function_handlers.clone_obj = NULL;
 }

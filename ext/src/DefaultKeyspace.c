@@ -582,6 +582,6 @@ void php_driver_define_DefaultKeyspace(TSRMLS_D)
 #if PHP_VERSION_ID >= 50400
   php_driver_default_keyspace_handlers.get_gc          = php_driver_type_default_keyspace_gc;
 #endif
-  php_driver_default_keyspace_handlers.compare_objects = php_driver_default_keyspace_compare;
+  php_driver_default_keyspace_handlers.compare = php_driver_default_keyspace_compare;
   php_driver_default_keyspace_handlers.clone_obj = NULL;
 }
