@@ -763,9 +763,8 @@ void php_driver_define_DefaultTable(TSRMLS_D)
 
   memcpy(&php_driver_default_table_handlers, zend_get_std_object_handlers(), sizeof(zend_object_handlers));
   php_driver_default_table_handlers.get_properties  = php_driver_default_table_properties;
-#if PHP_VERSION_ID >= 50400
+  PHP_VERSION_ID >= 50400
   php_driver_default_table_handlers.get_gc          = php_driver_type_default_table_gc;
-#endif
   php_driver_default_table_handlers.compare = php_driver_default_table_compare;
   php_driver_default_table_handlers.clone_obj = NULL;
 }
